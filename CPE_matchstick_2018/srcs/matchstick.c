@@ -32,7 +32,6 @@ int matchstick(int ac, char **av)
     if (lines <= 0 || matches <= 0)
         return (84);
     map = init_map(lines, matches);
-    map->color = 0;
     if (color(ac, av) == 1)
         map->color = 1;
     if (map == NULL)
