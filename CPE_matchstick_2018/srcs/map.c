@@ -13,7 +13,6 @@ map_t *init_map(int lines, int matches)
 
     if (map == NULL)
         return (NULL);
-    map->color = 0;
     map->max_sticks = 1 + (lines - 1) * 2;
     map->map = create_map(lines, map->max_sticks);
     if (map->map == NULL) {
@@ -23,6 +22,7 @@ map_t *init_map(int lines, int matches)
     map->lines = lines;
     map->max_matches = matches;
     map->status = 0;
+    map->color = 0;
     return (map);
 }
 
